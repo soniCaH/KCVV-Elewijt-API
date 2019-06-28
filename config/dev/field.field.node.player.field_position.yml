@@ -1,0 +1,21 @@
+uuid: 09b752c0-41b5-4024-b869-2f61c8b5cbf4
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.player
+  module:
+    - options
+id: node.player.field_position
+field_name: field_position
+entity_type: node
+bundle: player
+label: Positie
+description: 'Positie (of voorkeurspositie) van de speler.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

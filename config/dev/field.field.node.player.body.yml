@@ -1,0 +1,22 @@
+uuid: b101dfbb-01a7-4126-bb50-cc80096421d7
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.player
+  module:
+    - text
+id: node.player.body
+field_name: body
+entity_type: node
+bundle: player
+label: Omschrijving
+description: 'Optionele omschrijving of quote van de speler.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

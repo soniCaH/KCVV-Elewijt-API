@@ -1,0 +1,21 @@
+uuid: 25a1c2c7-c3ff-442c-a130-bca85b41d050
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_birth_date
+    - node.type.player
+  module:
+    - datetime
+id: node.player.field_birth_date
+field_name: field_birth_date
+entity_type: node
+bundle: player
+label: Geboortedatum
+description: 'Geboortedatum van de speler.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

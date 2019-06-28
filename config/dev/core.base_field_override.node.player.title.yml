@@ -1,0 +1,18 @@
+uuid: ba14a3cd-ff04-4929-a09a-916374838c70
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.player
+id: node.player.title
+field_name: title
+entity_type: node
+bundle: player
+label: Naam
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

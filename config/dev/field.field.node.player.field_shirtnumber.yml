@@ -1,0 +1,23 @@
+uuid: b5f98dad-cd7c-4280-9317-7320ee1ec9cc
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shirtnumber
+    - node.type.player
+id: node.player.field_shirtnumber
+field_name: field_shirtnumber
+entity_type: node
+bundle: player
+label: Voorkeursnummer
+description: 'Shirtnummer dat de voorkeur draagt van de speler.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 99
+  prefix: ''
+  suffix: ''
+field_type: integer

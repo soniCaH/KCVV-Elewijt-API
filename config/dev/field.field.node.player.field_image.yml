@@ -1,0 +1,38 @@
+uuid: 8f03c6aa-e078-4c82-b5e7-8a2155f54d15
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.player
+  module:
+    - image
+id: node.player.field_image
+field_name: field_image
+entity_type: node
+bundle: player
+label: Afbeelding
+description: 'Portret van de speler ZONDER achtergrond (transparant)!'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: player-picture
+  file_extensions: png
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 320x320
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: cee3c2c7-a4a9-45d4-b6b5-b7391d012489
+    alt: ''
+    title: ''
+    width: 437
+    height: 503
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

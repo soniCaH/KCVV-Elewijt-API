@@ -1,0 +1,11 @@
+uuid: 7f43e074-52c4-42e6-a294-31bf37b8dd55
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.player
+id: node.player
+target_entity_type_id: node
+target_bundle: player
+default_langcode: site_default
+language_alterable: false

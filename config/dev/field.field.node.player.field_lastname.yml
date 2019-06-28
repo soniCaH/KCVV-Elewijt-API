@@ -1,0 +1,19 @@
+uuid: 53b6112a-b253-441a-9de9-7ac4e6182c00
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lastname
+    - node.type.player
+id: node.player.field_lastname
+field_name: field_lastname
+entity_type: node
+bundle: player
+label: Achternaam
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

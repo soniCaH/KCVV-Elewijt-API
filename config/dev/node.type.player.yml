@@ -1,0 +1,17 @@
+uuid: 57e03b17-6542-4b96-8289-1cf536cec271
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Speler
+type: player
+description: 'Toevoegen van spelers (al dan niet actief voor een archief).'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
