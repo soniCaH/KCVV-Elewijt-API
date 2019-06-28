@@ -1,0 +1,12 @@
+uuid: 6048dde0-013f-4bc6-afbe-59dd35c5ca0c
+langcode: nl
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: flXhTcp55yLcyy7ZLOhPGKGZobZQJdkAFVWV3LseiuI
+id: user.register
+label: Inschrijven
+targetEntityType: user
+cache: true

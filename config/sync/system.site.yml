@@ -1,0 +1,14 @@
+uuid: 12e54ca2-386e-4a6f-8d8f-3667a39f81fb
+name: 'KCVV Elewijt Data'
+mail: climacon@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: nl
+default_langcode: nl
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

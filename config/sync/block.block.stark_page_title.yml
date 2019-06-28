@@ -1,0 +1,20 @@
+uuid: c8b9fe3f-804a-4909-9901-61cb4032f2a9
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - stark
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: stark_page_title
+theme: stark
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Paginatitel
+  provider: core
+  label_display: '0'
+visibility: {  }

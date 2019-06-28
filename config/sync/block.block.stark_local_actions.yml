@@ -1,0 +1,20 @@
+uuid: ac1bf7f6-c943-4065-be25-3a41032e935e
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - stark
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: stark_local_actions
+theme: stark
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primaire beheeracties'
+  provider: core
+  label_display: '0'
+visibility: {  }

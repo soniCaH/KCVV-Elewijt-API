@@ -1,0 +1,13 @@
+uuid: e4519898-d7e7-41d5-8f85-c8d8d2e15a3f
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonieme gebruiker'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'

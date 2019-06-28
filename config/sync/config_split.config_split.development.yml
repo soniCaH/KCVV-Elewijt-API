@@ -1,0 +1,18 @@
+uuid: 5bc50dd3-0962-4c28-8257-c9a06d26fd6d
+langcode: nl
+status: false
+dependencies: {  }
+id: development
+label: Development
+description: ''
+folder: ../config/dev
+module:
+  field_ui: 0
+  menu_ui: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
