@@ -1,0 +1,19 @@
+uuid: 7f0be06a-e845-4c0d-a540-3eba9863b2a6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fb_id_2
+    - node.type.team
+id: node.team.field_fb_id_2
+field_name: field_fb_id_2
+entity_type: node
+bundle: team
+label: 'FB ID 2'
+description: 'Extra Footbel ID dat eventueel gebruikt wordt na nieuwjaar (vooral jeugd).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

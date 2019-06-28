@@ -1,0 +1,21 @@
+uuid: f8494176-905c-4262-a783-3e76b969a261
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_vv_id
+field_name: field_vv_id
+entity_type: node
+type: string
+settings:
+  max_length: 10
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 400b5320-9ac8-4a10-b85d-cacb170fdf3a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vv_id
+    - node.type.team
+id: node.team.field_vv_id
+field_name: field_vv_id
+entity_type: node
+bundle: team
+label: 'VV ID'
+description: 'Voetbal Vlaanderen Ploeg ID'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

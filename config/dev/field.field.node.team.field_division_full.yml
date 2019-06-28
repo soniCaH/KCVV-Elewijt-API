@@ -1,0 +1,19 @@
+uuid: 95d18e15-afa6-47e8-9ade-dbeb8d2cdd59
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_division_full
+    - node.type.team
+id: node.team.field_division_full
+field_name: field_division_full
+entity_type: node
+bundle: team
+label: 'Divisie Omschrijving'
+description: 'Volledige omschrijving van de divisie (bvb 2e Provinciale A).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

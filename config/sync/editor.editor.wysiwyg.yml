@@ -1,0 +1,64 @@
+uuid: 8a864529-f7e4-4647-a6a3-017eb430a556
+langcode: nl
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg
+  module:
+    - ckeditor
+format: wysiwyg
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Stijling
+          items:
+            - Format
+        -
+          name: Opmaak
+          items:
+            - Bold
+            - Italic
+            - Underline
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Blokken
+          items:
+            - BulletedList
+            - NumberedList
+            - Blockquote
+        -
+          name: Media
+          items:
+            - DrupalImage
+            - Table
+        -
+          name: Hulpmiddelen
+          items:
+            - Copy
+            - Paste
+            - PasteFromWord
+            - '-'
+            - Source
+            - '-'
+            - Undo
+            - Redo
+  plugins:
+    stylescombo:
+      styles: 'p.highlight|Highlight Tekst'
+    language:
+      language_list: un
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

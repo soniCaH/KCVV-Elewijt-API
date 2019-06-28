@@ -1,0 +1,22 @@
+uuid: 4f991d04-c77d-4772-b8e1-69b34b3658a6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.team
+id: node.team.status
+field_name: status
+entity_type: node
+bundle: team
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Aan
+  off_label: Uit
+field_type: boolean

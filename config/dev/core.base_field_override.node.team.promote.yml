@@ -1,0 +1,22 @@
+uuid: fc9e45f7-99a8-4455-b342-cb8db69df646
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.team
+id: node.team.promote
+field_name: promote
+entity_type: node
+bundle: team
+label: 'Aangeraden op de voorpagina'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Aan
+  off_label: Uit
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 9db849c5-ddd7-411f-82fc-b52510d61326
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fb_id
+    - node.type.team
+id: node.team.field_fb_id
+field_name: field_fb_id
+entity_type: node
+bundle: team
+label: 'FB ID'
+description: 'Footbel Division ID - voor uitslagen en standen op te halen.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

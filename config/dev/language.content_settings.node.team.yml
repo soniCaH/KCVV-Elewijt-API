@@ -1,0 +1,11 @@
+uuid: 28df56e9-2340-4227-8646-0aecadb885b7
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.team
+id: node.team
+target_entity_type_id: node
+target_bundle: team
+default_langcode: site_default
+language_alterable: false
