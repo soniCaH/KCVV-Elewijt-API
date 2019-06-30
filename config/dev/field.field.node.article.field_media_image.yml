@@ -1,0 +1,28 @@
+uuid: 7903f628-d810-4602-8202-3e3dd02e003e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_image
+    - media.type.image
+    - node.type.article
+id: node.article.field_media_image
+field_name: field_media_image
+entity_type: node
+bundle: article
+label: 'Cover foto'
+description: 'Voeg of selecteer een afbeelding die bij dit artikel past. Dit komt op de voorpagina en bovenaan het artikel.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

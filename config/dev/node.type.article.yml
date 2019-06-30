@@ -1,0 +1,17 @@
+uuid: 96928ead-e430-4990-8717-cc376a1bc2ed
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Artikel
+type: article
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,14 @@
+uuid: a2887aa8-e94c-421b-bbed-e027f53c49ad
+langcode: nl
+status: true
+dependencies: {  }
+id: image
+label: Afbeelding
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name
