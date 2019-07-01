@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Artikel
 type: article
-description: ''
+description: 'Creeer een nieuw artikel, interview, verslag...'
 help: ''
 new_revision: true
 preview_mode: 1

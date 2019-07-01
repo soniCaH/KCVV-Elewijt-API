@@ -1,0 +1,22 @@
+uuid: 98376405-6181-44db-8a8b-92768780ca22
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: player_slug
+label: 'Player Slug'
+type: 'canonical_entities:node'
+pattern: 'player/[node:field_firstname]-[node:field_lastname]'
+selection_criteria:
+  80212b9a-1802-4a90-bb70-44843f489f3e:
+    id: node_type
+    bundles:
+      player: player
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 80212b9a-1802-4a90-bb70-44843f489f3e
+selection_logic: and
+weight: -5
+relationships: {  }

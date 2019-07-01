@@ -1,0 +1,23 @@
+uuid: 604a15b6-73ea-4c0a-a777-4eb0e467598c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - node.type.article
+id: node.article.field_featured
+field_name: field_featured
+entity_type: node
+bundle: article
+label: Featured
+description: 'Aanvinken als dit artikel belangrijk genoeg is om extra aandacht te krijgen.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Featured
+  off_label: Normaal
+field_type: boolean

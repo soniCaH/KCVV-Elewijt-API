@@ -40,6 +40,7 @@
         "drupal/config_split": "^1.4",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
+        "drupal/pathauto": "^1.4",
         "drush/drush": "^9.0.0",
         "harvesthq/chosen": "^1.8",
         "vlucas/phpdotenv": "^2.4",

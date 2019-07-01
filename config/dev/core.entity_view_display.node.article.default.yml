@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.field_media_image
+    - field.field.node.article.field_featured
+    - field.field.node.article.field_media_article_image
     - node.type.article
   module:
     - text
@@ -21,9 +22,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_media_image:
+  field_featured:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_media_article_image:
     type: entity_reference_entity_view
-    weight: 102
+    weight: 104
     label: above
     settings:
       view_mode: default

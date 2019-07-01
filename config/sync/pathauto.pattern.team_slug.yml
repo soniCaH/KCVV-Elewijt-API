@@ -1,0 +1,22 @@
+uuid: d96abb18-ab5c-4d8e-b774-55bdeb44865a
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: team_slug
+label: 'Team Slug'
+type: 'canonical_entities:node'
+pattern: 'team/[node:title]'
+selection_criteria:
+  59d901ae-21db-4e46-9791-e012041eae0a:
+    id: node_type
+    bundles:
+      team: team
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 59d901ae-21db-4e46-9791-e012041eae0a
+selection_logic: and
+weight: -5
+relationships: {  }

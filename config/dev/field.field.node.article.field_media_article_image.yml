@@ -1,18 +1,18 @@
-uuid: 7903f628-d810-4602-8202-3e3dd02e003e
+uuid: 18ee532f-6637-4e8f-9aac-03c7c2e1ab89
 langcode: nl
 status: true
 dependencies:
   config:
-    - field.storage.node.field_media_image
+    - field.storage.node.field_media_article_image
     - media.type.image
     - node.type.article
-id: node.article.field_media_image
-field_name: field_media_image
+id: node.article.field_media_article_image
+field_name: field_media_article_image
 entity_type: node
 bundle: article
-label: 'Cover foto'
+label: Afbeelding
 description: 'Voeg of selecteer een afbeelding die bij dit artikel past. Dit komt op de voorpagina en bovenaan het artikel.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
