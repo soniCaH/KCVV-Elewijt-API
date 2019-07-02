@@ -1,6 +1,6 @@
 build:
   stage: build
   script:
-    - "sudo -u cfit gitlab-ci-data.sh"
+    - "sudo -u footbalisto gitlab-ci-data.sh"
   only:
     - master
