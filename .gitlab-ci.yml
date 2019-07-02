@@ -1,0 +1,6 @@
+build:
+  stage: build
+  script:
+    - "sudo -u cfit gitlab-ci-data.sh"
+  only:
+    - master
