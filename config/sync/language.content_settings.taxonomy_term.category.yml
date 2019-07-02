@@ -1,0 +1,11 @@
+uuid: 3faca02c-aeed-4813-bc94-b9bdb8ad8be8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.category
+id: taxonomy_term.category
+target_entity_type_id: taxonomy_term
+target_bundle: category
+default_langcode: site_default
+language_alterable: false
