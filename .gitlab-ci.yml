@@ -1,6 +1,6 @@
 build:
   stage: build
   script:
-    - "sudo -u footbalisto gitlab-ci-data.sh"
+   - "sudo -u footbalisto gitlab-ci.sh api"
   only:
-    - master
+   - master
