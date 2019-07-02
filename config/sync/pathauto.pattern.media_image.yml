@@ -1,0 +1,23 @@
+uuid: 9c6e7b2b-11eb-4801-a827-08603bd81988
+langcode: nl
+status: true
+dependencies:
+  module:
+    - ctools
+    - media
+id: media_image
+label: 'Media image'
+type: 'canonical_entities:media'
+pattern: 'media/[media:name]'
+selection_criteria:
+  15387a81-a897-4b04-84df-f10d16100e2a:
+    id: 'entity_bundle:media'
+    bundles:
+      image: image
+    negate: false
+    context_mapping:
+      media: media
+    uuid: 15387a81-a897-4b04-84df-f10d16100e2a
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -7,16 +7,16 @@ dependencies:
 id: article_slug
 label: 'Article Slug'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: 'news/[node:created:html_date]-[node:title]'
 selection_criteria:
-  8a3a0ee8-9de5-44d0-a291-9538ed6153dd:
+  dabbf99d-2a8e-42e1-a7a5-28d9acb9bae2:
     id: node_type
     bundles:
       article: article
     negate: false
     context_mapping:
       node: node
-    uuid: 8a3a0ee8-9de5-44d0-a291-9538ed6153dd
+    uuid: dabbf99d-2a8e-42e1-a7a5-28d9acb9bae2
 selection_logic: and
 weight: -5
 relationships: {  }
