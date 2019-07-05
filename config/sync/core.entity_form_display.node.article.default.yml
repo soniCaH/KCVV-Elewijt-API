@@ -24,8 +24,8 @@ content:
     weight: 4
     settings:
       rows: 9
-      summary_rows: 3
       placeholder: ''
+      summary_rows: 1
     third_party_settings: {  }
     region: content
   created:

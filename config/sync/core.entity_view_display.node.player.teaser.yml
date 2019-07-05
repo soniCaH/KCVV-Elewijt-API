@@ -28,4 +28,11 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_birth_date: true
+  field_firstname: true
+  field_image: true
+  field_join_date: true
+  field_lastname: true
+  field_position: true
+  field_shirtnumber: true
   langcode: true

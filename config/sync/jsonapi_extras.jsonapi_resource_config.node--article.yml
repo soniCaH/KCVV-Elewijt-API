@@ -79,7 +79,9 @@ resourceFields:
     fieldName: created
     publicName: created
     enhancer:
-      id: ''
+      id: date_time_from_string
+      settings:
+        dateTimeFormat: d/m/Y
     disabled: false
   changed:
     fieldName: changed
@@ -137,12 +139,6 @@ resourceFields:
     enhancer:
       id: ''
     disabled: false
-  field_category:
-    fieldName: field_category
-    publicName: field_category
-    enhancer:
-      id: ''
-    disabled: false
   field_featured:
     fieldName: field_featured
     publicName: field_featured
@@ -152,6 +148,12 @@ resourceFields:
   field_media_article_image:
     fieldName: field_media_article_image
     publicName: field_media_article_image
+    enhancer:
+      id: ''
+    disabled: false
+  field_related_content:
+    fieldName: field_related_content
+    publicName: field_related_content
     enhancer:
       id: ''
     disabled: false

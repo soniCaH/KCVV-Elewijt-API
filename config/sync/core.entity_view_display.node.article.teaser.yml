@@ -28,4 +28,8 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_featured: true
+  field_media_article_image: true
+  field_related_content: true
+  field_tags: true
   langcode: true

@@ -18,4 +18,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_division_full: true
+  field_fb_id: true
+  field_fb_id_2: true
+  field_tagline: true
+  field_vv_id: true
   langcode: true
