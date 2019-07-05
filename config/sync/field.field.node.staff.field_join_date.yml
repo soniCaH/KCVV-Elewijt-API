@@ -1,0 +1,21 @@
+uuid: 17418cf3-b233-4927-a3c7-88cf629f2cf2
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_join_date
+    - node.type.staff
+  module:
+    - datetime
+id: node.staff.field_join_date
+field_name: field_join_date
+entity_type: node
+bundle: staff
+label: Aansluitingsdatum
+description: 'Datum sinds wanneer het lid aangesloten is bij de club.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

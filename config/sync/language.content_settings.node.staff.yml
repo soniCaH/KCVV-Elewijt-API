@@ -1,0 +1,11 @@
+uuid: eff14dec-9065-4af9-851f-a1e0aee457b6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.staff
+id: node.staff
+target_entity_type_id: node
+target_bundle: staff
+default_langcode: site_default
+language_alterable: false

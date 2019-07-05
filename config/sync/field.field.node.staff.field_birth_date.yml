@@ -1,0 +1,21 @@
+uuid: fbbfb05a-b12f-4424-af8c-daca4a7217bb
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_birth_date
+    - node.type.staff
+  module:
+    - datetime
+id: node.staff.field_birth_date
+field_name: field_birth_date
+entity_type: node
+bundle: staff
+label: Geboortedatum
+description: 'Geboortedatum van het staflid.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

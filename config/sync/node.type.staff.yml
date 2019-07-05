@@ -1,0 +1,17 @@
+uuid: 10bed47f-d76b-4f49-8511-16276e093dd9
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Staff
+type: staff
+description: 'Trainer, bestuursleden... iedereen die ook een profiel kan hebben.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

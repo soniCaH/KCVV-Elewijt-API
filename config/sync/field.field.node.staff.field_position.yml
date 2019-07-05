@@ -1,0 +1,21 @@
+uuid: 5bb6ae24-de77-4020-a526-e40c787ccc0b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.staff
+  module:
+    - options
+id: node.staff.field_position
+field_name: field_position
+entity_type: node
+bundle: staff
+label: Functie
+description: 'Functie(s) van het staflid.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

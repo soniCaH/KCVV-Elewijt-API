@@ -1,0 +1,18 @@
+uuid: 4a48a277-48b5-4d5b-ab9e-513a45920ac0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.staff
+id: node.staff.title
+field_name: title
+entity_type: node
+bundle: staff
+label: Naam
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

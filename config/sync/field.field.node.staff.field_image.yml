@@ -1,0 +1,38 @@
+uuid: f44dc632-f17f-4b28-a862-df458f8eb7cd
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.staff
+  module:
+    - image
+id: node.staff.field_image
+field_name: field_image
+entity_type: node
+bundle: staff
+label: Afbeelding
+description: 'Portret van het staflid ZONDER achtergrond (transparant)!'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: staff-picture
+  file_extensions: 'png gif'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 320x320
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

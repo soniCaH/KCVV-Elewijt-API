@@ -1,0 +1,22 @@
+uuid: 77f3bbd9-6d46-49bc-90ce-d161b88dd532
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.staff
+  module:
+    - text
+id: node.staff.body
+field_name: body
+entity_type: node
+bundle: staff
+label: Omschrijving
+description: 'Optionele omschrijving of quote van het staflid.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
