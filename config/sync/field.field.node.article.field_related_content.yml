@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_related_content
     - node.type.article
     - node.type.player
+    - node.type.staff
     - node.type.team
 id: node.article.field_related_content
 field_name: field_related_content
@@ -23,6 +24,7 @@ settings:
     target_bundles:
       article: article
       player: player
+      staff: staff
       team: team
     sort:
       field: _none
