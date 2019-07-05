@@ -1,21 +1,19 @@
-uuid: 533b689c-3fc8-489f-ad92-7c481653bb2d
+uuid: 5b83a260-cc90-4512-9646-7e810d17d94c
 langcode: nl
 status: true
 dependencies:
   config:
     - field.storage.node.field_position_staff
     - node.type.staff
-  module:
-    - text
 id: node.staff.field_position_staff
 field_name: field_position_staff
 entity_type: node
 bundle: staff
 label: Functie
-description: 'Functienaam van staflid.'
+description: 'Functieomschrijving van het staflid'
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

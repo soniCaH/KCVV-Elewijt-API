@@ -83,9 +83,10 @@ content:
   field_position_staff:
     weight: 110
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: text_default
+    type: string
     region: content
   links:
     weight: 100
