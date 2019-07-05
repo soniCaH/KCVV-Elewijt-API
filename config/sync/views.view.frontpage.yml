@@ -61,7 +61,7 @@ display:
           admin_label: ''
           label: ''
           empty: true
-          title: 'Welcome to [site:name]'
+          title: 'Welkom op [site:name]'
           plugin_id: title
       exposed_form:
         type: basic

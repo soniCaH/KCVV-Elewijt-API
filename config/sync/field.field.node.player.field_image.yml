@@ -19,7 +19,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: player-picture
-  file_extensions: png
+  file_extensions: 'png gif'
   max_filesize: ''
   max_resolution: ''
   min_resolution: 320x320
@@ -28,7 +28,7 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: cee3c2c7-a4a9-45d4-b6b5-b7391d012489
+    uuid: ''
     alt: ''
     title: ''
     width: 437
