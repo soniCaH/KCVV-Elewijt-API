@@ -1,30 +1,31 @@
-uuid: b8552040-9bd6-4563-b36c-716bd793a20c
+uuid: a2cf8f2a-2886-4e73-8b49-d8bd8c4c3f23
 langcode: nl
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.media_library
     - field.field.media.image.field_media_image
-    - image.style.resize_max_width
+    - image.style.media_library
     - media.type.image
   module:
     - image
-id: media.image.default
+id: media.image.media_library
 targetEntityType: media
 bundle: image
-mode: default
+mode: media_library
 content:
-  field_media_image:
-    weight: 0
+  thumbnail:
+    type: image
     label: hidden
     settings:
-      image_style: resize_max_width
+      image_style: media_library
       image_link: ''
+    weight: 0
     third_party_settings: {  }
-    type: image
     region: content
 hidden:
   created: true
+  field_media_image: true
   langcode: true
   name: true
-  thumbnail: true
   uid: true

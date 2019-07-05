@@ -1,0 +1,31 @@
+uuid: 9d05b05f-0333-4cd9-a233-bd424f65ac8a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_content
+    - node.type.article
+    - node.type.player
+    - node.type.team
+id: node.article.field_related_content
+field_name: field_related_content
+entity_type: node
+bundle: article
+label: 'Gerelateerde inhoud'
+description: 'Selecteer hier artikels, spelers, teams, events waaraan dit artikel gerelateerd is.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      player: player
+      team: team
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: player
+field_type: entity_reference

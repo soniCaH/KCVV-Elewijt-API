@@ -36,8 +36,8 @@ settings:
         -
           name: Media
           items:
-            - DrupalImage
             - Table
+            - media_image_embed
         -
           name: Hulpmiddelen
           items:
@@ -55,7 +55,7 @@ settings:
     language:
       language_list: un
 image_upload:
-  status: false
+  status: true
   scheme: public
   directory: inline-images
   max_size: ''

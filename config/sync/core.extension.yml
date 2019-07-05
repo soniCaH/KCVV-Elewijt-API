@@ -15,7 +15,9 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  embed: 0
   entity_browser: 0
+  entity_embed: 0
   field: 0
   file: 0
   filter: 0
@@ -26,6 +28,7 @@ module:
   link: 0
   locale: 0
   media: 0
+  media_library: 0
   node: 0
   options: 0
   page_cache: 0
@@ -39,6 +42,7 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  views_bulk_operations: 0
   menu_link_content: 1
   pathauto: 1
   views: 10

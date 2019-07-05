@@ -1,0 +1,24 @@
+uuid: b7d36800-b61a-484b-a24c-86c9bb304a40
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - entity_browser.browser.media_images
+    - media.type.image
+  module:
+    - entity_embed
+    - media
+label: Afbeeldingen
+id: media_image_embed
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins:
+    - 'view_mode:media.full'
+  entity_browser: media_images
+  entity_browser_settings:
+    display_review: false
+icon_uuid: null

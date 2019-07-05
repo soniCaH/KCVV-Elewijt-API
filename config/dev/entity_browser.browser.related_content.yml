@@ -1,0 +1,31 @@
+uuid: e740f4bb-d57e-4277-a2d4-cd2913da4d95
+langcode: nl
+status: true
+dependencies:
+  config:
+    - views.view.related_content_selector
+  module:
+    - views
+name: related_content
+label: 'Related content'
+display: modal
+display_configuration:
+  width: '850'
+  height: '650'
+  link_text: 'Selecteer inhoud'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  580bfed0-3187-4290-8cd1-73c4754c58b4:
+    settings:
+      view: related_content_selector
+      view_display: entity_browser_1
+      submit_text: 'Selecteer inhoud'
+      auto_select: false
+    uuid: 580bfed0-3187-4290-8cd1-73c4754c58b4
+    weight: 1
+    label: Selecteer
+    id: view

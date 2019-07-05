@@ -1,0 +1,41 @@
+uuid: 86acecd5-b652-4e90-925f-334820d5ab30
+langcode: nl
+status: true
+dependencies:
+  config:
+    - views.view.images
+  module:
+    - views
+name: media_images
+label: Afbeeldingen
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Selecteer afbeeldingen'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  4a040e38-49e8-45dc-8c2b-4e79032b10ce:
+    settings:
+      view: images
+      view_display: entity_browser_1
+      submit_text: 'Selecteer afbeeldingen'
+      auto_select: false
+    uuid: 4a040e38-49e8-45dc-8c2b-4e79032b10ce
+    weight: -9
+    label: selecteer
+    id: view
+  653df3a8-634a-475a-84db-d4e6661a3f30:
+    settings:
+      upload_location: 'public://media/'
+      multiple: true
+      submit_text: 'Bestanden selecteren'
+      extensions: 'jpg jpeg gif png bmp webp'
+    uuid: 653df3a8-634a-475a-84db-d4e6661a3f30
+    weight: -10
+    label: opladen
+    id: upload

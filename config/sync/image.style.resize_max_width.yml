@@ -1,0 +1,15 @@
+uuid: 763b5b22-30b8-410a-babc-ec386a867198
+langcode: nl
+status: true
+dependencies: {  }
+name: resize_max_width
+label: 'Resize max width'
+effects:
+  ad18855a-18c4-4bd2-ac82-dec75ca75900:
+    uuid: ad18855a-18c4-4bd2-ac82-dec75ca75900
+    id: image_scale
+    weight: 1
+    data:
+      width: 1680
+      height: null
+      upscale: false

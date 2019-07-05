@@ -26,7 +26,7 @@ content:
     region: content
   field_featured:
     weight: 103
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -37,7 +37,7 @@ content:
   field_media_article_image:
     type: entity_reference_entity_view
     weight: 104
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -45,7 +45,7 @@ content:
     region: content
   field_related_content:
     weight: 107
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -53,7 +53,7 @@ content:
     region: content
   field_tags:
     weight: 106
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -61,8 +61,8 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true

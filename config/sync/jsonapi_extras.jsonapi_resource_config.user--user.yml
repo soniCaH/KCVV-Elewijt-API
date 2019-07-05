@@ -1,11 +1,11 @@
-uuid: 6450d239-19a0-4501-883e-608f9fb61687
+uuid: f58c0063-0344-40ea-8e2a-af957f2d7a63
 langcode: nl
 status: true
 dependencies:
   module:
     - user
 id: user--user
-disabled: true
+disabled: false
 path: user/user
 resourceType: user--user
 resourceFields:
@@ -22,23 +22,23 @@ resourceFields:
       id: ''
     disabled: false
   langcode:
+    disabled: true
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
-    disabled: false
   preferred_langcode:
+    disabled: true
     fieldName: preferred_langcode
     publicName: preferred_langcode
     enhancer:
       id: ''
-    disabled: false
   preferred_admin_langcode:
+    disabled: true
     fieldName: preferred_admin_langcode
     publicName: preferred_admin_langcode
     enhancer:
       id: ''
-    disabled: false
   name:
     fieldName: name
     publicName: name
@@ -46,23 +46,23 @@ resourceFields:
       id: ''
     disabled: false
   pass:
+    disabled: true
     fieldName: pass
     publicName: pass
     enhancer:
       id: ''
-    disabled: false
   mail:
+    disabled: true
     fieldName: mail
     publicName: mail
     enhancer:
       id: ''
-    disabled: false
   timezone:
+    disabled: true
     fieldName: timezone
     publicName: timezone
     enhancer:
       id: ''
-    disabled: false
   status:
     fieldName: status
     publicName: status
@@ -70,50 +70,50 @@ resourceFields:
       id: ''
     disabled: false
   created:
+    disabled: true
     fieldName: created
     publicName: created
     enhancer:
       id: ''
-    disabled: false
   changed:
+    disabled: true
     fieldName: changed
     publicName: changed
     enhancer:
       id: ''
-    disabled: false
   access:
+    disabled: true
     fieldName: access
     publicName: access
     enhancer:
       id: ''
-    disabled: false
   login:
+    disabled: true
     fieldName: login
     publicName: login
     enhancer:
       id: ''
-    disabled: false
   init:
+    disabled: true
     fieldName: init
     publicName: init
     enhancer:
       id: ''
-    disabled: false
   roles:
+    disabled: true
     fieldName: roles
     publicName: roles
     enhancer:
       id: ''
-    disabled: false
   default_langcode:
+    disabled: true
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
-    disabled: false
   path:
+    disabled: true
     fieldName: path
     publicName: path
     enhancer:
       id: ''
-    disabled: false
