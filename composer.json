@@ -36,6 +36,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "doctrine/annotations": "~1.4.0",
         "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/auto_entitylabel": "^2.1@beta",
         "drupal/chosen": "^2.7",
         "drupal/config_filter": "^1.4",
         "drupal/config_split": "^1.4",

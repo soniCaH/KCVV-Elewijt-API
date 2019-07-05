@@ -1,0 +1,7 @@
+status: '1'
+pattern: '[node:field_firstname] [node:field_lastname]'
+php: 0
+escape: 0
+dependencies:
+  config:
+    - node.type.player
