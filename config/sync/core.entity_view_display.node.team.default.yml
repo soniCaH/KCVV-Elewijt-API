@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.team.field_division_full
     - field.field.node.team.field_fb_id
     - field.field.node.team.field_fb_id_2
+    - field.field.node.team.field_players
+    - field.field.node.team.field_staff
     - field.field.node.team.field_tagline
     - field.field.node.team.field_vv_id
     - node.type.team
@@ -39,6 +41,22 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_players:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_staff:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_tagline:
     weight: 104
