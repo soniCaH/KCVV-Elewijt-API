@@ -9,13 +9,12 @@ dependencies:
     - field.field.node.staff.field_image
     - field.field.node.staff.field_join_date
     - field.field.node.staff.field_lastname
-    - field.field.node.staff.field_position
     - field.field.node.staff.field_position_short
+    - field.field.node.staff.field_position_staff
     - node.type.staff
   module:
     - datetime
     - image
-    - options
     - text
     - user
 id: node.staff.default
@@ -73,13 +72,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_position:
-    weight: 106
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_position_short:
     weight: 108
     label: above
@@ -87,6 +79,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_position_staff:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   links:
     weight: 100

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.player.field_lastname
     - field.field.node.player.field_position
     - field.field.node.player.field_shirtnumber
+    - field.field.node.player.field_vv_id
     - node.type.player
   module:
     - datetime
@@ -80,6 +81,14 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  field_vv_id:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 9
@@ -101,6 +110,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   langcode: true
