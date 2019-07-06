@@ -13,8 +13,8 @@ dependencies:
     - field.field.node.staff.field_position_staff
     - node.type.staff
   module:
+    - config_default_image
     - datetime
-    - image
     - text
     - user
 id: node.staff.default
@@ -25,12 +25,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_birth_date:
-    weight: 105
+    weight: 5
     label: above
     settings:
       format_type: medium
@@ -39,7 +39,7 @@ content:
     type: datetime_default
     region: content
   field_firstname:
-    weight: 109
+    weight: 7
     label: above
     settings:
       link_to_entity: false
@@ -47,16 +47,23 @@ content:
     type: string
     region: content
   field_image:
-    weight: 111
+    weight: 1
     label: above
     settings:
       image_style: ''
       image_link: ''
+      default_image:
+        path: /sites/default/files/fallback/kcvv-player-bg.png
+        alt: ''
+        title: ''
+        use_image_style: 0
+        width: null
+        height: null
     third_party_settings: {  }
-    type: image
+    type: config_default_image
     region: content
   field_join_date:
-    weight: 102
+    weight: 3
     label: above
     settings:
       format_type: medium
@@ -65,7 +72,7 @@ content:
     type: datetime_default
     region: content
   field_lastname:
-    weight: 103
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -73,7 +80,7 @@ content:
     type: string
     region: content
   field_position_short:
-    weight: 108
+    weight: 6
     label: above
     settings:
       link_to_entity: false
@@ -81,7 +88,7 @@ content:
     type: string
     region: content
   field_position_staff:
-    weight: 110
+    weight: 8
     label: above
     settings:
       link_to_entity: false
@@ -89,7 +96,7 @@ content:
     type: string
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
