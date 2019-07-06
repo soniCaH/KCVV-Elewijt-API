@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.player.field_position
     - field.field.node.player.field_shirtnumber
     - field.field.node.player.field_vv_id
+    - image.style.media_library
     - node.type.player
   module:
     - datetime
@@ -49,8 +50,8 @@ content:
   field_image:
     weight: 1
     settings:
+      preview_image_style: media_library
       progress_indicator: throbber
-      preview_image_style: ''
     third_party_settings: {  }
     type: image_image
     region: content
@@ -112,9 +113,9 @@ content:
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   langcode: true

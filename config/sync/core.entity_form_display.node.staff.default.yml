@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.staff.field_lastname
     - field.field.node.staff.field_position_short
     - field.field.node.staff.field_position_staff
+    - image.style.media_library
     - node.type.staff
   module:
     - datetime
@@ -48,8 +49,8 @@ content:
   field_image:
     weight: 1
     settings:
+      preview_image_style: media_library
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
