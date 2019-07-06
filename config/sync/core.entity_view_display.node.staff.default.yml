@@ -13,8 +13,8 @@ dependencies:
     - field.field.node.staff.field_position_staff
     - node.type.staff
   module:
+    - config_default_image
     - datetime
-    - image
     - text
     - user
 id: node.staff.default
@@ -52,8 +52,15 @@ content:
     settings:
       image_style: ''
       image_link: ''
+      default_image:
+        path: /sites/default/files/fallback/kcvv-player-bg.png
+        alt: ''
+        title: ''
+        use_image_style: 0
+        width: null
+        height: null
     third_party_settings: {  }
-    type: image
+    type: config_default_image
     region: content
   field_join_date:
     weight: 102
@@ -90,8 +97,8 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
