@@ -1,0 +1,22 @@
+uuid: 88858d16-3ff5-4220-9887-dbe001ea6cfe
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: staff_slug
+label: 'Staff Slug'
+type: 'canonical_entities:node'
+pattern: 'staff/[node:field_firstname]-[node:field_lastname]'
+selection_criteria:
+  0c9d742f-50af-4db7-8bed-2b00bb17b0d5:
+    id: node_type
+    bundles:
+      staff: staff
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0c9d742f-50af-4db7-8bed-2b00bb17b0d5
+selection_logic: and
+weight: -5
+relationships: {  }
