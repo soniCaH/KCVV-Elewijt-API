@@ -85,9 +85,7 @@ resourceFields:
     fieldName: changed
     publicName: changed
     enhancer:
-      id: date_time_from_string
-      settings:
-        dateTimeFormat: d/m/Y
+      id: ''
     disabled: false
   promote:
     fieldName: promote
