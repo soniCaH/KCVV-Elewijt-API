@@ -12,6 +12,7 @@ dependencies:
     - node.type.article
   module:
     - entity_browser
+    - media_library
     - path
     - text
 id: node.article.default
@@ -44,11 +45,9 @@ content:
   field_media_article_image:
     weight: 1
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   field_related_content:
     weight: 3
@@ -123,5 +122,10 @@ content:
       size: 60
       placeholder: ''
     region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

@@ -27,15 +27,16 @@ widgets:
       auto_select: false
     uuid: 4a040e38-49e8-45dc-8c2b-4e79032b10ce
     weight: -9
-    label: selecteer
+    label: Selecteer
     id: view
-  653df3a8-634a-475a-84db-d4e6661a3f30:
+  aceced2f-55ac-4a72-bed0-897ecd0b0701:
     settings:
-      upload_location: 'public://media/'
-      multiple: true
-      submit_text: 'Bestanden selecteren'
-      extensions: 'jpg jpeg gif png bmp webp'
-    uuid: 653df3a8-634a-475a-84db-d4e6661a3f30
-    weight: -10
-    label: opladen
-    id: upload
+      extensions: 'jpg jpeg png gif'
+      media_type: image
+      upload_location: 'public://inline-media'
+      multiple: '1'
+      submit_text: 'Bestanden opladen'
+    uuid: aceced2f-55ac-4a72-bed0-897ecd0b0701
+    weight: 3
+    label: 'Media toevoegen'
+    id: media_image_upload

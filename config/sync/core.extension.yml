@@ -24,6 +24,7 @@ module:
   file: 0
   filter: 0
   image: 0
+  inline_entity_form: 0
   jsonapi: 0
   jsonapi_extras: 0
   language: 0

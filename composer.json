@@ -45,6 +45,7 @@
         "drupal/core": "^8.7.0",
         "drupal/entity_browser": "^2.1",
         "drupal/entity_embed": "^1.0",
+        "drupal/inline_entity_form": "^1.0@RC",
         "drupal/jsonapi_extras": "^3.8",
         "drupal/pathauto": "^1.4",
         "drupal/redirect": "^1.4",
