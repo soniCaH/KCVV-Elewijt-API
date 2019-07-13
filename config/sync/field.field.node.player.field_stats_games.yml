@@ -1,0 +1,25 @@
+uuid: 2072fed4-3217-4e24-873d-59c15fe9678e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stats_games
+    - node.type.player
+id: node.player.field_stats_games
+field_name: field_stats_games
+entity_type: node
+bundle: player
+label: Wedstrijden
+description: 'Aantal gespeelde wedstrijden dit seizoen (A+B) samen.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: 99
+  prefix: ''
+  suffix: ''
+field_type: integer

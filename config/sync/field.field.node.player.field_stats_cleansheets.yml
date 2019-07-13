@@ -1,0 +1,25 @@
+uuid: dd86a859-5cb5-4157-8dc6-66262bdc4645
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stats_cleansheets
+    - node.type.player
+id: node.player.field_stats_cleansheets
+field_name: field_stats_cleansheets
+entity_type: node
+bundle: player
+label: 'Clean Sheets'
+description: 'Aantal keren dat keeper/verdediging de nul kon houden in een wedstrijd.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: 99
+  prefix: ''
+  suffix: ''
+field_type: integer

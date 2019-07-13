@@ -5,12 +5,18 @@ dependencies:
   config:
     - field.field.node.player.body
     - field.field.node.player.field_birth_date
+    - field.field.node.player.field_date_leave
     - field.field.node.player.field_firstname
     - field.field.node.player.field_image
     - field.field.node.player.field_join_date
     - field.field.node.player.field_lastname
     - field.field.node.player.field_position
     - field.field.node.player.field_shirtnumber
+    - field.field.node.player.field_stats_cards_red
+    - field.field.node.player.field_stats_cards_yellow
+    - field.field.node.player.field_stats_cleansheets
+    - field.field.node.player.field_stats_games
+    - field.field.node.player.field_stats_goals
     - field.field.node.player.field_vv_id
     - node.type.player
   module:
@@ -34,6 +40,15 @@ content:
   field_birth_date:
     weight: 102
     label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_leave:
+    weight: 115
+    label: above
     settings:
       format_type: medium
       timezone_override: ''
@@ -91,6 +106,51 @@ content:
   field_shirtnumber:
     weight: 106
     label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_stats_cards_red:
+    weight: 113
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_stats_cards_yellow:
+    weight: 112
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_stats_cleansheets:
+    weight: 114
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_stats_games:
+    weight: 110
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_stats_goals:
+    weight: 111
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true

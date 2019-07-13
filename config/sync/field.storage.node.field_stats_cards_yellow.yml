@@ -1,0 +1,20 @@
+uuid: 8f343c95-d08d-43aa-93af-675c495a61f8
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_stats_cards_yellow
+field_name: field_stats_cards_yellow
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

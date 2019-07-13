@@ -1,0 +1,21 @@
+uuid: 270e7db1-b825-4cdc-bb3b-c6e3bc052d72
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_leave
+    - node.type.player
+  module:
+    - datetime
+id: node.player.field_date_leave
+field_name: field_date_leave
+entity_type: node
+bundle: player
+label: Afscheidsdatum
+description: 'Datum dat de speler stopte/transfer naar andere ploeg deed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

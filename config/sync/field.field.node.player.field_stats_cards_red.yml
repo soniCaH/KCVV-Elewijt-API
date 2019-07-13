@@ -1,0 +1,25 @@
+uuid: 256bd395-1dba-4019-af6b-457b0d4fbde1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stats_cards_red
+    - node.type.player
+id: node.player.field_stats_cards_red
+field_name: field_stats_cards_red
+entity_type: node
+bundle: player
+label: 'Rode kaarten'
+description: 'Aantal ontvangen rode kaarten.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: 99
+  prefix: ''
+  suffix: ''
+field_type: integer

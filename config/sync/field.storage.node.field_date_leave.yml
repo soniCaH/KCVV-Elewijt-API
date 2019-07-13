@@ -1,0 +1,20 @@
+uuid: 53eb3ad2-e264-49d2-bf21-35f9cd0fc83b
+langcode: nl
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_date_leave
+field_name: field_date_leave
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

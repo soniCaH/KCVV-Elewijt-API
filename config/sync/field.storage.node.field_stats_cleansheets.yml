@@ -1,0 +1,20 @@
+uuid: bc06c93a-72f1-4567-bdf0-df12d5bf07a7
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_stats_cleansheets
+field_name: field_stats_cleansheets
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
