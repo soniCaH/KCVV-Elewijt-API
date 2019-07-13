@@ -1,0 +1,17 @@
+uuid: 1eab0848-fb53-43f8-ae12-ca4defac4958
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Pagina
+type: page
+description: 'Statische pagina met informatie / tekst ...'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

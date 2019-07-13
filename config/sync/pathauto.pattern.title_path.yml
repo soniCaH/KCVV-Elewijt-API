@@ -1,0 +1,22 @@
+uuid: ccf63fbe-189c-4ffe-9cda-0f8ca112c674
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: title_path
+label: 'Titel als pad'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  f9698f74-e25a-447c-bb72-92f8f850a2ca:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f9698f74-e25a-447c-bb72-92f8f850a2ca
+selection_logic: and
+weight: -5
+relationships: {  }

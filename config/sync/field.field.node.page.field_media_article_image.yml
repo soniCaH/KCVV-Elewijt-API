@@ -1,0 +1,28 @@
+uuid: 9b624c83-70fe-40c9-af04-6f5c21a887c6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_article_image
+    - media.type.image
+    - node.type.page
+id: node.page.field_media_article_image
+field_name: field_media_article_image
+entity_type: node
+bundle: page
+label: Afbeelding
+description: 'Grote hoofdafbeelding bovenaan de pagina.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
