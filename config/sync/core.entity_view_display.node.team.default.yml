@@ -3,6 +3,7 @@ langcode: nl
 status: true
 dependencies:
   config:
+    - field.field.node.team.field_contact_info
     - field.field.node.team.field_division_full
     - field.field.node.team.field_fb_id
     - field.field.node.team.field_fb_id_2
@@ -12,12 +13,20 @@ dependencies:
     - field.field.node.team.field_vv_id
     - node.type.team
   module:
+    - text
     - user
 id: node.team.default
 targetEntityType: node
 bundle: team
 mode: default
 content:
+  field_contact_info:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_division_full:
     weight: 105
     label: above
