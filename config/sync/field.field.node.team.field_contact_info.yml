@@ -1,0 +1,21 @@
+uuid: 1c7afa76-4c0a-4992-a454-1293748b287d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_info
+    - node.type.team
+  module:
+    - text
+id: node.team.field_contact_info
+field_name: field_contact_info
+entity_type: node
+bundle: team
+label: 'Contact Info'
+description: 'Contactinformatie, bedoeld voor tegenstanders of geïnteresseerde spelers. Idealiter per ploeg de afgevaardigde of trainer.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

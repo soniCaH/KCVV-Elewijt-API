@@ -1,0 +1,28 @@
+uuid: 0aae7885-0a6f-4ce5-9c02-1efaba813df0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_article_image
+    - media.type.image
+    - node.type.team
+id: node.team.field_media_article_image
+field_name: field_media_article_image
+entity_type: node
+bundle: team
+label: Ploegfoto
+description: 'Teamfoto van de hele ploeg.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

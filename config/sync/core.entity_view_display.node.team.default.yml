@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.team.field_division_full
     - field.field.node.team.field_fb_id
     - field.field.node.team.field_fb_id_2
+    - field.field.node.team.field_media_article_image
     - field.field.node.team.field_players
     - field.field.node.team.field_staff
     - field.field.node.team.field_tagline
@@ -22,14 +23,14 @@ mode: default
 content:
   field_contact_info:
     weight: 108
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_division_full:
     weight: 105
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -37,7 +38,7 @@ content:
     region: content
   field_fb_id:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -45,15 +46,24 @@ content:
     region: content
   field_fb_id_2:
     weight: 103
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_media_article_image:
+    weight: 109
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
   field_players:
     weight: 107
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -61,7 +71,7 @@ content:
     region: content
   field_staff:
     weight: 106
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -69,7 +79,7 @@ content:
     region: content
   field_tagline:
     weight: 104
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -77,7 +87,7 @@ content:
     region: content
   field_vv_id:
     weight: 101
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -85,8 +95,8 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
