@@ -1,0 +1,5 @@
+
+administer netlify build:
+  title: 'Administer Netlify Build settings'
+  description: 'Allow access to manage the Netlify build settings'
+  restrict access: true

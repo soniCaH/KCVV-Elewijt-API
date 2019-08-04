@@ -1,0 +1,10 @@
+
+kcvv_netlify.kcvv_netlify_form:
+  path: '/admin/config/kcvv/netlify'
+  defaults:
+    _form: '\Drupal\kcvv_netlify\Form\KcvvNetlifyForm'
+    _title: 'KcvvNetlifyForm'
+  requirements:
+    _permission: 'administer netlify build'
+  options:
+    _admin_route: TRUE

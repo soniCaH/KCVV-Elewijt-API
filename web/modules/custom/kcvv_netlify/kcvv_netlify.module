@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Contains kcvv_netlify.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use GuzzleHttp\Exception\RequestException;
+
+/**
+ * Implements hook_help().
+ */
+function kcvv_netlify_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kcvv_netlify module.
+    case 'help.page.kcvv_netlify':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Integration between Drupal and Netlify to trigger and manage deploys.') . '</p>';
+      return $output;
+
+    default:
+      return NULL;
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function kcvv_netlify_entity_presave(EntityInterface $entity) {
+  $config = \Drupal::config('kcvv_netlify.kcvvnetlify');
+  $netlify_build_hook_url = $config->get('kcvv_netlify_build_hook_url');
+  $frontend_url = $config->get('kcvv_frontend_url');
+
+  $entity_type = $entity->getEntityTypeId();
+
+  if ($entity_type === 'node') {
+    $entity_state = $entity->status->getValue()[0]['value'];
+    if ($entity_state === 1) {
+      try {
+        \Drupal::httpClient()->post($netlify_build_hook_url);
+        \Drupal::logger('kcvv_netlify')
+          ->info(t('Successfully triggered Netlify build hook.'));
+        $messenger = \Drupal::messenger();
+        $messenger->addMessage(t('Wijzigingen worden binnen enkele minuten zichtbaar op %url', [
+          '%url' => $frontend_url,
+        ]));
+      } catch (RequestException $exception) {
+        \Drupal::logger('kcvv_netlify')
+          ->error(t('Failed to trigger Netlify build hook due to error "%error"', ['%error' => $exception->getMessage()]));
+        return FALSE;
+      }
+    }
+  }
+
+  return TRUE;
+}

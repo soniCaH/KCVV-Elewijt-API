@@ -1,0 +1,6 @@
+kcvv_netlify.kcvv_netlify_form:
+  title: 'Netlify'
+  route_name: kcvv_netlify.kcvv_netlify_form
+  description: 'Configure the Netlify build hook URL.'
+  parent: system.admin_config_system
+  weight: 99

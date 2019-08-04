@@ -1,0 +1,5 @@
+name: 'KCVV Netlify Integration'
+type: module
+description: 'Integration between Drupal and Netlify to trigger and manage deploys.'
+core: 8.x
+package: 'KCVV'
