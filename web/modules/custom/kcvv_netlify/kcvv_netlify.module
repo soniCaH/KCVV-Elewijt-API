@@ -7,7 +7,6 @@
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\Core\Url;
 use GuzzleHttp\Exception\RequestException;
 
 /**
@@ -45,11 +44,10 @@ function kcvv_netlify_entity_presave(EntityInterface $entity) {
         \Drupal::logger('kcvv_netlify')
           ->info(t('Successfully triggered Netlify build hook.'));
         $messenger = \Drupal::messenger();
-        $messenger->addMessage(t('Wijzigingen worden binnen enkele minuten zichtbaar op @url', [
-          '@url' => Url::fromUri($frontend_url, ['attributes' => ['target' => '_blank']]),
+        $messenger->addMessage(t('Wijzigingen worden binnen enkele minuten zichtbaar op %url', [
+          '%url' => $frontend_url,
         ]));
-      }
-      catch (RequestException $exception) {
+      } catch (RequestException $exception) {
         \Drupal::logger('kcvv_netlify')
           ->error(t('Failed to trigger Netlify build hook due to error "%error"', ['%error' => $exception->getMessage()]));
         return FALSE;
