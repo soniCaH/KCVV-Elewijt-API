@@ -1,5 +1,6 @@
 kcvv_netlify: null
-_core:
-  default_config_hash: l_XT1lOxHSHzhHQYh701ywvO-i8Ydsf5FE5gpP482z8
-langcode: nl
 kcvv_netlify_build_hook_url: 'https://api.netlify.com/build_hooks/5d28963fec69fd765cc0bd82'
+kcvv_frontend_url: 'http://preview.kcvvelewijt.be'
+_core:
+  default_config_hash: WIMsHB4JmrUzZKuSc8SGoq1qv_Te4_vzEyEsJEfsUjI
+langcode: nl
