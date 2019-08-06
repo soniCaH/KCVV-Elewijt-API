@@ -38,7 +38,6 @@ function kcvv_netlify_entity_presave(EntityInterface $entity) {
 
   $netlify_build_hook_url = $config->get('kcvv_netlify_build_hook_url');
 
-
   if ($entity_type === 'node') {
     $entity_state = $entity->status->getValue()[0]['value'];
     if ($entity_state === 1) {
@@ -47,14 +46,16 @@ function kcvv_netlify_entity_presave(EntityInterface $entity) {
         $netlify_build_parameters = "?trigger_title=" . urlencode("NEW " . $entity->bundle() . " ADDED: " . $entity->label());
       }
       try {
-        \Drupal::httpClient()->post($netlify_build_hook_url . $netlify_build_parameters);
+        \Drupal::httpClient()
+          ->post($netlify_build_hook_url . $netlify_build_parameters);
         \Drupal::logger('kcvv_netlify')
           ->info(t('Successfully triggered Netlify build hook.'));
         $messenger = \Drupal::messenger();
         $messenger->addMessage(t('Wijzigingen worden binnen enkele minuten zichtbaar op %url', [
           '%url' => $frontend_url,
         ]));
-      } catch (RequestException $exception) {
+      }
+      catch (RequestException $exception) {
         \Drupal::logger('kcvv_netlify')
           ->error(t('Failed to trigger Netlify build hook due to error "%error"', ['%error' => $exception->getMessage()]));
         return FALSE;
