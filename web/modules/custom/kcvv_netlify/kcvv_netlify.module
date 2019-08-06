@@ -30,17 +30,24 @@ function kcvv_netlify_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_entity_presave().
  */
 function kcvv_netlify_entity_presave(EntityInterface $entity) {
+  $entity_type = $entity->getEntityTypeId();
+
   $config = \Drupal::config('kcvv_netlify.kcvvnetlify');
-  $netlify_build_hook_url = $config->get('kcvv_netlify_build_hook_url');
+
   $frontend_url = $config->get('kcvv_frontend_url');
 
-  $entity_type = $entity->getEntityTypeId();
+  $netlify_build_hook_url = $config->get('kcvv_netlify_build_hook_url');
+
 
   if ($entity_type === 'node') {
     $entity_state = $entity->status->getValue()[0]['value'];
     if ($entity_state === 1) {
+      $netlify_build_parameters = "?trigger_title=" . urlencode("UPDATED " . $entity->bundle() . " : " . $entity->label());
+      if ($entity->isNew()) {
+        $netlify_build_parameters = "?trigger_title=" . urlencode("NEW " . $entity->bundle() . " ADDED: " . $entity->label());
+      }
       try {
-        \Drupal::httpClient()->post($netlify_build_hook_url);
+        \Drupal::httpClient()->post($netlify_build_hook_url . $netlify_build_parameters);
         \Drupal::logger('kcvv_netlify')
           ->info(t('Successfully triggered Netlify build hook.'));
         $messenger = \Drupal::messenger();
