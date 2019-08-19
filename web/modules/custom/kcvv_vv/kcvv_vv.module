@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains kcvv_vv.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kcvv_vv_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kcvv_vv module.
+    case 'help.page.kcvv_vv':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Integration between Drupal and Voetbal Vlaanderen API to sync player stats') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function kcvv_vv_cron() {
+  $count = \Drupal::service('kcvv_vv.voetbalvlaanderen')->syncPlayersAllTeams();
+  \Drupal::logger('kcvv_vv')
+    ->notice('Synchronized @count players.', ['@count' => $count]);
+}

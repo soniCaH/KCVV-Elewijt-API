@@ -28,6 +28,7 @@ module:
   jsonapi: 0
   jsonapi_extras: 0
   kcvv_netlify: 0
+  kcvv_vv: 0
   language: 0
   link: 0
   locale: 0
@@ -46,6 +47,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  ultimate_cron: 0
   update: 0
   user: 0
   views_bulk_operations: 0

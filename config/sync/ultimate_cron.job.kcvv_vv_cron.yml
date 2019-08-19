@@ -1,0 +1,30 @@
+uuid: 7b16f2d5-607e-47c4-b0e5-08e112d8dc2e
+langcode: nl
+status: true
+dependencies:
+  module:
+    - kcvv_vv
+title: 'Default cron handler'
+id: kcvv_vv_cron
+weight: 0
+module: kcvv_vv
+callback: kcvv_vv_cron
+scheduler:
+  id: crontab
+  configuration:
+    rules:
+      - '0+@ 3 * * *'
+    catch_up: 0
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000

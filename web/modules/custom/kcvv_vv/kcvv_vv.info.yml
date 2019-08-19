@@ -1,0 +1,5 @@
+name: 'KCVV Voetbal Vlaanderen Integration'
+type: module
+description: 'Integration between Drupal and Voetbal Vlaanderen API to sync player stats'
+core: 8.x
+package: 'KCVV'

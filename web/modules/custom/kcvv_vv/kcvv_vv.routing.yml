@@ -1,0 +1,10 @@
+
+kcvv_vv.kcvv_vv_form:
+  path: '/admin/config/kcvv/voetbalvlaanderen'
+  defaults:
+    _form: '\Drupal\kcvv_vv\Form\KcvvVvForm'
+    _title: 'VoetbalVlaanderen'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

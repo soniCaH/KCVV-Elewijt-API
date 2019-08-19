@@ -1,0 +1,6 @@
+kcvv_vv.kcvv_vv_form:
+  title: 'Voetbal Vlaanderen'
+  route_name: kcvv_vv.kcvv_vv_form
+  description: 'Administer and sync VoetbalVlaanderen stats'
+  parent: system.admin_config_system
+  weight: 99
