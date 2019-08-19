@@ -5,6 +5,7 @@ namespace Drupal\kcvv_vv\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\kcvv_vv\KvccVoetbalVlaanderenApiServiceInterface;
+use GuzzleHttp\Exception\RequestException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -54,7 +55,7 @@ class KcvvVvForm extends FormBase {
     $form['run'] = [
       '#type' => 'submit',
       '#value' => t('Sync'),
-      '#submit' => ['::runCron'],
+      '#submit' => ['::syncPlayers'],
     ];
 
     return $form;
@@ -63,12 +64,30 @@ class KcvvVvForm extends FormBase {
   /**
    * Form submission handler for running cron manually.
    */
-  public function runCron(array &$form, FormStateInterface $form_state) {
+  public function syncPlayers(array &$form, FormStateInterface $form_state) {
     if ($count = $this->kcvvVvVoetbalvlaanderen->syncPlayersAllTeams()) {
-      $this->messenger()->addStatus($this->t('Synchronized @count player(s).', ['@count' => $count]));
+      $this->messenger()
+        ->addStatus($this->t('Synchronized @count player(s).', ['@count' => $count]));
+
+      // @TODO : replace with service!!
+      $config = \Drupal::config('kcvv_netlify.kcvvnetlify');
+      $netlify_build_hook_url = $config->get('kcvv_netlify_build_hook_url');
+      $netlify_build_parameters = "?trigger_title=" . urlencode("Synchronized players with VoetbalVlaanderen statistics.");
+      try {
+        \Drupal::httpClient()
+          ->post($netlify_build_hook_url . $netlify_build_parameters);
+      }
+      catch (RequestException $exception) {
+        $this->messenger()
+          ->addError($this->t('Failed to trigger Netlify build.'));
+        \Drupal::logger('kcvv_netlify')
+          ->error(t('Failed to trigger Netlify build hook due to error "%error"', ['%error' => $exception->getMessage()]));
+      }
+
     }
     else {
-      $this->messenger()->addError($this->t('Failed to synchronize player statistics.'));
+      $this->messenger()
+        ->addError($this->t('Failed to synchronize player statistics.'));
     }
   }
 

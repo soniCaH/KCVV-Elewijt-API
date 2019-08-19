@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use GuzzleHttp\Exception\RequestException;
 
 /**
  * Implements hook_help().
@@ -30,4 +31,17 @@ function kcvv_vv_cron() {
   $count = \Drupal::service('kcvv_vv.voetbalvlaanderen')->syncPlayersAllTeams();
   \Drupal::logger('kcvv_vv')
     ->notice('Synchronized @count players.', ['@count' => $count]);
+
+  // @TODO : replace with service!!
+  $config = \Drupal::config('kcvv_netlify.kcvvnetlify');
+  $netlify_build_hook_url = $config->get('kcvv_netlify_build_hook_url');
+  $netlify_build_parameters = "?trigger_title=" . urlencode("Synchronized players with VoetbalVlaanderen statistics.");
+  try {
+    \Drupal::httpClient()
+      ->post($netlify_build_hook_url . $netlify_build_parameters);
+  }
+  catch (RequestException $exception) {
+    \Drupal::logger('kcvv_netlify')
+      ->error(t('Failed to trigger Netlify build hook due to error "%error"', ['%error' => $exception->getMessage()]));
+  }
 }
