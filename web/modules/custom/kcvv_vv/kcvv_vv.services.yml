@@ -1,7 +1,4 @@
 services:
-  logger.channel.kcvv_vv:
-    parent: logger.channel_base
-    arguments: ['kcvv_vv']
   kcvv_vv.voetbalvlaanderen:
     class: Drupal\kcvv_vv\KvccVoetbalVlaanderenApiService
-    arguments: ['@http_client', '@entity.manager']
+    arguments: ['@http_client', '@entity.manager', '@logger.channel.default']

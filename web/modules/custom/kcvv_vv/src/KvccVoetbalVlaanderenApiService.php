@@ -7,6 +7,7 @@ use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
+use Psr\Log\LoggerInterface;
 
 /**
  * Class KvccVoetbalVlaanderenApiService.
@@ -43,12 +44,21 @@ class KvccVoetbalVlaanderenApiService implements KvccVoetbalVlaanderenApiService
   protected $entityTypeManager;
 
   /**
+   * A logger instance.
+   *
+   * @var \Psr\Log\LoggerInterface
+   */
+  protected $logger;
+
+  /**
    * Constructs a new KvccVoetbalVlaanderenApiService object.
    */
   public function __construct(ClientInterface $http_client,
-                              EntityTypeManagerInterface $entityTypeManager) {
+                              EntityTypeManagerInterface $entityTypeManager,
+                              LoggerInterface $logger) {
     $this->httpClient = $http_client;
     $this->entityTypeManager = $entityTypeManager;
+    $this->logger = $logger;
   }
 
   /**
@@ -76,29 +86,48 @@ class KvccVoetbalVlaanderenApiService implements KvccVoetbalVlaanderenApiService
     foreach ($teams as $team) {
       $players = $team->get('field_players');
       if (!$players) {
-        return $count;
+        continue;
       }
 
       $players_vv = $this->fetchTeamPlayerStats($team->get('field_vv_id')->value)->players;
       if (!$players_vv) {
-        return $count;
+        continue;
       }
 
       foreach ($players as $player) {
         $player_object = $player->get('entity')->getValue();
         // Find matching player in API result.
-        $player_object_vv = $this->getPlayerByFirstOrLastName($players_vv, $player_object->get('field_firstname')->value, $player_object->get('field_lastname')->value);
+        $player_object_id = $this->getPlayerIndexByFirstOrLastName($players_vv, $player_object->get('field_firstname')->value, $player_object->get('field_lastname')->value);
 
-        if (!$player_object_vv) {
-          return $count;
+        if (!$player_object_id) {
+          $this->logger->notice("No stats found for @player_first @player_last in @team", [
+            '@player_first' => $player_object->get('field_firstname')->value,
+            '@player_last' => $player_object->get('field_lastname')->value,
+            '@team' => $team->label(),
+          ]);
+          continue;
         }
+        $player_object_vv = $players_vv[$player_object_id];
 
         // Let's go syncing.
         $player_object->set('field_vv_id', $player_object_vv->id);
         $player_object->set('field_stats_games', $player_object_vv->statistics->numberOfMatches);
         $player_object->set('field_stats_goals', $player_object_vv->statistics->numberOfGoals);
         $player_object->save();
+
+        unset($players_vv[$player_object_id]);
+
         $count++;
+      }
+
+      if (count($players_vv) > 0) {
+        foreach ($players_vv as $pvv) {
+          $this->logger->notice( "No player in the API found for @player_first @player_last in @team", [
+            '@player_first' => $pvv->firstName,
+            '@player_last' => $pvv->lastName,
+            '@team' => $team->label(),
+          ]);
+        }
       }
     }
 
@@ -151,12 +180,33 @@ class KvccVoetbalVlaanderenApiService implements KvccVoetbalVlaanderenApiService
     try {
       $response = $this->httpClient->get($url->toString(), ['headers' => ['Content-type' => 'application/json']]);
       $data = (string) $response->getBody();
-    }
-    catch (RequestException $e) {
+    } catch (RequestException $e) {
       watchdog_exception('kcvv_vv', "Error fetching GraphQL @url", ['@url' => $url->toString()]);
     }
 
     return json_decode($data);
+  }
+
+  /**
+   * Search the API results for a given firstname and lastname.
+   *
+   * @param array $array
+   *   Array of results to search in.
+   * @param string $firstname
+   *   First name to look for.
+   * @param string $lastname
+   *   Last name to look for.
+   *
+   * @return int|null
+   *   Associative index or null if player not found
+   */
+  protected function getPlayerIndexByFirstOrLastName(array $array, $firstname, $lastname) {
+    foreach ($array as $index => $row) {
+      if ($row->lastName == $lastname && $row->firstName == $firstname) {
+        return $index;
+      }
+    }
+    return NULL;
   }
 
   /**
