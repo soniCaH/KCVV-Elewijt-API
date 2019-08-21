@@ -99,7 +99,7 @@ class KvccVoetbalVlaanderenApiService implements KvccVoetbalVlaanderenApiService
         // Find matching player in API result.
         $player_object_id = $this->getPlayerIndexByFirstOrLastName($players_vv, $player_object->get('field_firstname')->value, $player_object->get('field_lastname')->value);
 
-        if (!$player_object_id) {
+        if ($player_object_id === NULL) {
           $this->logger->notice("No stats found for @player_first @player_last in @team", [
             '@player_first' => $player_object->get('field_firstname')->value,
             '@player_last' => $player_object->get('field_lastname')->value,
