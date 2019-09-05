@@ -52,6 +52,7 @@
         "drupal/jsonapi_extras": "^3.8",
         "drupal/pathauto": "^1.4",
         "drupal/redirect": "^1.4",
+        "drupal/text_summary_options": "^1.0",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/views_bulk_operations": "^3.2",
         "drush/drush": "^9.0.0",
