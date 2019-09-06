@@ -69,7 +69,6 @@ class KvccVoetbalVlaanderenApiService implements KvccVoetbalVlaanderenApiService
    */
   public function syncPlayersAllTeams() {
     $count = 0;
-    // Query with entity_type.manager (The way to go)
     $query = $this->entityTypeManager->getStorage('node');
     $query_result = $query->getQuery()
       ->condition('status', 1)
@@ -85,7 +84,7 @@ class KvccVoetbalVlaanderenApiService implements KvccVoetbalVlaanderenApiService
 
     foreach ($teams as $team) {
       $players = $team->get('field_players');
-      if (!$players) {
+      if (empty($players)) {
         continue;
       }
 
