@@ -1,0 +1,14 @@
+uuid: 71fff85b-e19e-4b08-ab9f-d719aa7a55fd
+langcode: nl
+status: true
+dependencies:
+  config:
+    - user.role.webmaster
+  module:
+    - user
+id: user_add_role_action.webmaster
+label: 'De rol Webmaster toewijzen aan de geselecteerde gebruiker(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: webmaster
