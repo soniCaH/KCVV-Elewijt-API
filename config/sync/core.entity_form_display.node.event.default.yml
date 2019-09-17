@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.field_daterange
     - field.field.node.event.field_event_link
     - field.field.node.event.field_image
+    - image.style.resize_max_width
     - node.type.event
   module:
     - datetime_range
@@ -34,8 +35,8 @@ content:
   field_image:
     weight: 2
     settings:
+      preview_image_style: resize_max_width
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
