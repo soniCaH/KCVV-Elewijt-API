@@ -1,0 +1,17 @@
+uuid: 6caa2d3b-d82f-48ae-b6cd-1683dd5e5372
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Sponsor
+type: sponsor
+description: 'Sponsors voor op de website'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

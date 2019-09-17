@@ -1,0 +1,11 @@
+uuid: faa57699-2b88-4c13-8c88-412ca11d6efb
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.sponsor
+id: node.sponsor
+target_entity_type_id: node
+target_bundle: sponsor
+default_langcode: site_default
+language_alterable: false

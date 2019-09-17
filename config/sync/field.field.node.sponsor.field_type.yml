@@ -1,0 +1,21 @@
+uuid: 5a82d506-d36b-47b5-8959-49a4e0ccfc32
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.sponsor
+  module:
+    - options
+id: node.sponsor.field_type
+field_name: field_type
+entity_type: node
+bundle: sponsor
+label: Type
+description: Sponsorniveau.
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
