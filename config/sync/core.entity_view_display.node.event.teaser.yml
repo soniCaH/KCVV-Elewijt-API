@@ -1,0 +1,25 @@
+uuid: 30de0490-5e4a-4bfe-ac76-1754c96976e3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_event_link
+    - field.field.node.event.field_image
+    - node.type.event
+  module:
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_event_link: true
+  field_image: true
+  langcode: true

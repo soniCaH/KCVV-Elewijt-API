@@ -1,0 +1,21 @@
+uuid: cf06d2f6-b11d-486b-876e-448551ceb8f6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_daterange
+    - node.type.event
+  module:
+    - datetime_range
+id: node.event.field_daterange
+field_name: field_daterange
+entity_type: node
+bundle: event
+label: Datum
+description: 'Start- en einddatum van het evenement.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

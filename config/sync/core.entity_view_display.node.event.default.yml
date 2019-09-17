@@ -1,0 +1,57 @@
+uuid: ff73139b-9bd7-4ed5-92aa-fa0655883ce8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_daterange
+    - field.field.node.event.field_event_link
+    - field.field.node.event.field_image
+    - node.type.event
+  module:
+    - datetime_range
+    - image
+    - link
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_daterange:
+    weight: 104
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_link:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

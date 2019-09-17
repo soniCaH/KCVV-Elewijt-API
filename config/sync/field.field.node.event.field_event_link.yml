@@ -1,0 +1,23 @@
+uuid: 82ef5fb6-f10d-4f7a-accf-a36bccf5b013
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_link
+    - node.type.event
+  module:
+    - link
+id: node.event.field_event_link
+field_name: field_event_link
+entity_type: node
+bundle: event
+label: 'Evenement link'
+description: '(externe) link naar meer info over het evenement (facebook bvb).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link
